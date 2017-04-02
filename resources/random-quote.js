@@ -22,8 +22,11 @@ function putContent( response ) {
 		"href", "https://twitter.com/intent/tweet?text=" 
 		+ response.quoteText + " - " + response.quoteAuthor
 		);
-	$(".quote").html( response.quoteText ).animate({ 'opacity': '0'}, 0, function() { 
-		$(this).animate({ 'opacity': '1'}, 'slow')});
+	
+	$(".quote").html( response.quoteText ).animate({ 'opacity': '0'}, 0,
+		function() {
+			$(this).animate({ 'opacity': '1'}, 'slow')
+		});
 
 	if ( !response.quoteText ) {
 		$(".author").html( "-Unknown" );
