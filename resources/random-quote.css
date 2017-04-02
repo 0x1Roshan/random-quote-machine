@@ -1,0 +1,16 @@
+body 
+{
+	background-color: #00796b;
+}
+.jumbotron
+{
+	margin-top: 10px;
+	height: 400px;
+	background-color: #00897b;
+	box-shadow: 2px 2px 2px grey;
+}
+.quote-box 
+{
+	background-color: #afb42b;
+	border: 0px;
+}
