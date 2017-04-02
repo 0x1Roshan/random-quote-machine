@@ -19,6 +19,11 @@ function getResponse() {
 
 function putContent( response ) {
 
+	$(".twitter-share-button").attr(
+		"href", "https://twitter.com/intent/tweet?text=" 
+		+ response.quoteText + " - " + response.quoteAuthor
+		);
+
 	$(".quote").html( response.quoteText );
 
 	if ( !response.quoteText ) {
@@ -26,4 +31,6 @@ function putContent( response ) {
 	} else {
 		$(".author").html( "-" + " " + response.quoteAuthor );
 	}
+
+
 }
