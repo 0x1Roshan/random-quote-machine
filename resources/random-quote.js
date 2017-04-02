@@ -28,7 +28,7 @@ function putContent( response ) {
 			$(this).animate({ 'opacity': '1'}, 'slow')
 		});
 
-	if ( response.quoteText == "" ) {
+	if ( response.quoteAuthor == "" ) {
 		$(".author").html( "-Unknown" );
 	} else {
 		$(".author").html( "-" + " " + response.quoteAuthor );
