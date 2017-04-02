@@ -18,11 +18,12 @@ function getResponse() {
 }
 
 function putContent( response ) {
+
 	$(".quote").html( response.quoteText );
 
 	if ( !response.quoteText ) {
 		$(".author").html( "-Unknown" );
 	} else {
-		$(".author").html( "-" + response.quoteAuthor );
+		$(".author").html( "-" + " " + response.quoteAuthor );
 	}
 }
