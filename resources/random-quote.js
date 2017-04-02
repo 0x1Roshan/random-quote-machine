@@ -18,19 +18,16 @@ function getResponse() {
 }
 
 function putContent( response ) {
-
 	$(".twitter-share-button").attr(
 		"href", "https://twitter.com/intent/tweet?text=" 
 		+ response.quoteText + " - " + response.quoteAuthor
 		);
-
-	$(".quote").html( response.quoteText );
+	$(".quote").html( response.quoteText ).animate({ 'opacity': '0'}, 0, function() { 
+		$(this).animate({ 'opacity': '1'}, 'slow')});
 
 	if ( !response.quoteText ) {
 		$(".author").html( "-Unknown" );
 	} else {
 		$(".author").html( "-" + " " + response.quoteAuthor );
 	}
-
-
 }
